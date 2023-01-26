@@ -6,6 +6,12 @@ class Counters extends Component {
     return (
       <div>
         <button
+          onClick={this.props.onAddItem}
+          className="btn btn-success btn-sm m-2"
+        >
+          Add an Item
+        </button>
+        <button
           onClick={this.props.onReset}
           className="btn btn-primary btn-sm m-2"
         >
@@ -16,6 +22,7 @@ class Counters extends Component {
             key={counter.id}
             onDelete={this.props.onDelete}
             onIncrement={this.props.onIncrement}
+            onDecrease={this.props.onDecrease}
             counter={counter}
           />
         ))}
